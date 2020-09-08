@@ -12,8 +12,6 @@ const files = {
     scssPath: 'src/scss/**/*.scss',
     htmlPath: 'dist/**/*.html',
     jsPath: 'src/js/**/*.js', 
-    jsDistPath: 'dist/js/**/*.js',
-    imagesDistPath: 'dist/images/**/*',
     imagePath: 'src/images/**/*'
 }
 
@@ -40,8 +38,8 @@ function imagesTask(done){
 //observador 
 function watchTask(){
     watch(
-        [files.scssPath, files.htmlPath, files.jsPath, files.imagesDistPath],
-        series(scssTask, minifyJSTask, reloadTask)
+        [files.scssPath, files.htmlPath, files.jsPath, files.imagePath],
+        series(scssTask, minifyJSTask, imagesTask, reloadTask)
         )
 }
 
@@ -61,7 +59,7 @@ function reloadTask(done){
 
 
 //exports.css = scssTask;  
-exports.images = imagesTask;
+exports.imagesTask = imagesTask;
 exports.default = series(scssTask, serveTask, watchTask);
 
 
