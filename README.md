@@ -35,7 +35,7 @@ dist
 | Tarea | Función |
 | ------ | ------ |
 | scssTask | Convierte los archivos .scss a archivos de CSS, posterior a ello minifica el archivo CSS resultante y lo almacena en la carpeta dist/css |
-| minifyJSTask | [Minifica los archivos .js ubicados dentro de la carpeta src/js, y posteriormente almacena los archivos minificados en dist/js] |
+| minifyJSTask | Minifica los archivos .js ubicados dentro de la carpeta src/js, y posteriormente almacena los archivos minificados en dist/js |
 | imagesTask | Optimiza los archivos de imagen encontrados en la carpeta src/images y posteriomente almacena las imagenes optimizadas en dist/images|
 | watchTask | revisa cambios en los archivos .scss, .html, .js y archivos de imagen; si detecta algun cambio ejecuta en serie las tareas: scssTask, minifyTask, imagesTask y reloadTask|
 | serveTask| Inicializa el servidor de BrowserSync y toma como archivos base del servidor los archivos incluidos en la carpeta 'dist' |
